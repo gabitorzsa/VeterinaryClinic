@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<medicalFiles>
+    <medicalFile id="1" idDoctor="1">
+        <treatment>medicament</treatment>
+        <diagnose>paracetamol</diagnose>
+        <symptoms>
+            <symptom>uscaciune</symptom>
+            <symptom>somnolenta</symptom>
+        </symptoms>
+        <idAnimal>1</idAnimal>
+        <name>Rex</name>
+        <species>canin</species>
+        <weight>5</weight>
+    </medicalFile>
+    <medicalFile id="2" idDoctor="2">
+        <treatment>aerosol</treatment>
+        <diagnose>paracetamol</diagnose>
+        <symptoms>
+            <symptom>plans</symptom>
+            <symptom>durere</symptom>
+        </symptoms>
+        <idAnimal>2</idAnimal>
+        <name>Lala</name>
+        <species>felina</species>
+        <weight>1.6</weight>
+    </medicalFile>
+</medicalFiles>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecttema1ps.view.ViewDoctor">
+    <center>
+        <TabPane prefHeight="400.0" prefWidth="741.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Medical files">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="741.0">
+                            <TableView fx:id="medicalFilesTable" editable="true" layoutX="1.0" layoutY="-4.0" prefHeight="224.0" prefWidth="731.0">
+                                <columns>
+                                    <TableColumn fx:id="animalInfoColumn" editable="false" prefWidth="145.0" text="Animal" />
+                                    <TableColumn fx:id="idColumn" editable="false" prefWidth="103.0" text="Id medical file" />
+                                    <TableColumn fx:id="idDoctorColumn" editable="false" prefWidth="66.0" text="IdDoctor" />
+                                    <TableColumn fx:id="symptomsColumn" prefWidth="202.0" text="Symptoms" />
+                                    <TableColumn fx:id="diagnoseColumn" prefWidth="106.0" text="Diagnose" />
+                                    <TableColumn fx:id="treatmentColumn" prefWidth="108.0" text="Treatment" />
+                                </columns>
+                            </TableView>
+                            <Button layoutX="392.0" layoutY="272.0" mnemonicParsing="false" onAction="#saveClick" prefHeight="38.0" prefWidth="74.0" text="Save" />
+                            <TextField fx:id="tfEditSymptoms" alignment="TOP_CENTER" layoutX="211.0" layoutY="237.0" promptText="Edit symptoms" />
+                            <TextField fx:id="tfEditDiagnose" alignment="TOP_CENTER" layoutX="211.0" layoutY="278.0" promptText="Edit diagnose" />
+                            <TextField fx:id="tfEditTreatment" alignment="TOP_CENTER" layoutX="211.0" layoutY="316.0" promptText="Edit treatment" />
+                            <Button layoutX="647.0" layoutY="310.0" mnemonicParsing="false" onAction="#logoutClick" prefHeight="39.0" prefWidth="62.0" style="-fx-background-color: #0589ff;" text="Logout" textFill="WHITE" />
+                            <TextField fx:id="chooseId" alignment="TOP_CENTER" layoutX="38.0" layoutY="237.0" prefHeight="24.0" prefWidth="145.0" promptText="Medical file id to update" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Filter animals">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="741.0">
+                            <children>
+                                <TextField fx:id="tfFilterByDiagnose" layoutX="14.0" layoutY="14.0" promptText="Filter by diagnose" />
+                                <TextField fx:id="tfFilterByTreatment" layoutX="14.0" layoutY="48.0" promptText="Filter by treatment" />
+                                <Button layoutX="193.0" layoutY="23.0" mnemonicParsing="false" onAction="#filterClick" prefHeight="34.0" prefWidth="60.0" style="-fx-background-color: #0589ff;" text="Filter" textFill="WHITE" />
+                                <TableView fx:id="filterTable" layoutX="10.0" layoutY="79.0" prefHeight="278.0" prefWidth="712.0">
+                                    <columns>
+                                        <TableColumn fx:id="animal" prefWidth="413.0" text="Animal" />
+                                        <TableColumn fx:id="filterDiagnose" minWidth="50.0" prefWidth="149.0" text="Diagnose" />
+                                        <TableColumn fx:id="filterTreatment" prefWidth="160.0" text="Treatment" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Work program">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="741.0">
+                     <children>
+                        <Button contentDisplay="CENTER" layoutX="395.0" layoutY="292.0" mnemonicParsing="false" onAction="#editProgramClick" prefHeight="39.0" prefWidth="106.0" text="Edit program" />
+                        <TableView fx:id="workProgramTableView" layoutX="70.0" layoutY="14.0" prefHeight="261.0" prefWidth="579.0">
+                          <columns>
+                            <TableColumn fx:id="idWpColumn" prefWidth="46.0" text="Id" />
+                            <TableColumn fx:id="nameWpColumn" prefWidth="91.0" text="Name" />
+                            <TableColumn fx:id="startProgramWpColumn" prefWidth="91.0" text="Start program" />
+                            <TableColumn fx:id="endProgramWpColumn" prefWidth="91.0" text="End program" />
+                            <TableColumn fx:id="consultsColumn" prefWidth="259.0" text="Consults" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="tdEditStartProgram" alignment="TOP_CENTER" layoutX="222.0" layoutY="279.0" promptText="Edit start program" />
+                        <TextField fx:id="tfIdToUpdate" alignment="TOP_CENTER" layoutX="71.0" layoutY="279.0" prefHeight="26.0" prefWidth="138.0" promptText="Choose id to update" />
+                        <TextField fx:id="tfEditEndProgram" alignment="TOP_CENTER" layoutX="222.0" layoutY="317.0" promptText="Edit end program" />
+                        <Button layoutX="639.0" layoutY="310.0" mnemonicParsing="false" onAction="#logoutClick" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: #0589ff;" text="Logout" textFill="WHITE" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

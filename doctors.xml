@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doctors>
+    <doctor id="1">
+        <type>doctor</type>
+        <name>calin</name>
+        <startProgram>10:00</startProgram>
+        <finishProgram>15:00</finishProgram>
+        <consults>
+            <consult>10:00</consult>
+            <consult>12:00</consult>
+        </consults>
+        <username>calinh</username>
+        <password>pass</password>
+    </doctor>
+    <doctor id="2">
+        <type>doctor</type>
+        <name>gabi</name>
+        <startProgram>No info yet</startProgram>
+        <finishProgram>No info yet</finishProgram>
+        <consults>
+            <consult>13:00</consult>
+        </consults>
+        <username>gabi</username>
+        <password>password</password>
+    </doctor>
+    <doctor id="3">
+        <type>doctor</type>
+        <name>stefan</name>
+        <startProgram>09:00</startProgram>
+        <finishProgram>10:00</finishProgram>
+        <consults>
+            <consult>08:00</consult>
+            <consult>12:00</consult>
+        </consults>
+        <username>stefant</username>
+        <password>pass</password>
+    </doctor>
+    <doctor id="4">
+        <type>doctor</type>
+        <name>cristian</name>
+        <startProgram>No info yet</startProgram>
+        <finishProgram>No info yet</finishProgram>
+        <consults>
+            <consult>08:00</consult>
+        </consults>
+        <username>cristit</username>
+        <password>pass</password>
+    </doctor>
+</doctors>

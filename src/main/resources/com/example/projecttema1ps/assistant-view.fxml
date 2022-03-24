@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecttema1ps.view.ViewAssistant">
+    <children>
+        <TabPane layoutX="-1.0" layoutY="-1.0" prefHeight="399.0" prefWidth="741.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="CRUD">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="animalTableView" layoutX="128.0" layoutY="32.0" prefHeight="198.0" prefWidth="485.0">
+                                    <columns>
+                                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+                                        <TableColumn fx:id="animalColumn" prefWidth="107.0" text="Animal name" />
+                                        <TableColumn fx:id="speciesColumn" minWidth="0.0" prefWidth="153.0" text="Species" />
+                                        <TableColumn fx:id="weightColumn" prefWidth="149.0" text="Weight" />
+                                    </columns>
+                                </TableView>
+                                <Button layoutX="613.0" layoutY="248.0" mnemonicParsing="false" text="Create" />
+                                <Button layoutX="613.0" layoutY="284.0" mnemonicParsing="false" onAction="#updateAnimalClick" text="Update" />
+                                <Button layoutX="613.0" layoutY="321.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+                                <TextField fx:id="tfUpdateName" layoutX="392.0" layoutY="248.0" promptText="Edit name" />
+                                <TextField fx:id="tfUpdateSpecies" layoutX="392.0" layoutY="284.0" promptText="Edit species" />
+                                <TextField fx:id="tfUpdateWeight" layoutX="392.0" layoutY="321.0" promptText="Edit weight" />
+                        <TextField fx:id="tfChooseAnimalId" layoutX="185.0" layoutY="248.0" promptText="Choose animal id to edit" />
+                        <Button layoutX="37.0" layoutY="308.0" mnemonicParsing="false" onAction="#logoutClick" prefHeight="39.0" prefWidth="69.0" style="-fx-background-color: #0589ff;" text="Logout" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Filter animals">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="tfFilterAnimalByDoctor" layoutX="39.0" layoutY="24.0" promptText="Search by doctor" />
+                                <TextField fx:id="tfFilterAnimalByDiagnose" layoutX="275.0" layoutY="24.0" promptText="Search by diagnose" />
+                                <TextField fx:id="tfFilterAnimalBySpecies" layoutX="507.0" layoutY="24.0" promptText="Search by species" />
+                                <Button layoutX="300.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchClick" prefHeight="18.0" prefWidth="110.0" text="Filter" />
+                                <TableView fx:id="filterAnimalTableView" layoutX="94.0" layoutY="93.0" prefHeight="182.0" prefWidth="523.0">
+                                    <columns>
+                                        <TableColumn fx:id="idFilterColumn" prefWidth="131.0" text="Id" />
+                                        <TableColumn fx:id="animalFilterColumn" prefWidth="120.0" text="Animal" />
+                                        <TableColumn fx:id="speciesFilterColumn" prefWidth="128.0" text="Species" />
+                                        <TableColumn fx:id="weightFilterColumn" prefWidth="143.0" text="Weight" />
+                                    </columns>
+                                </TableView>
+                        <Button layoutX="40.0" layoutY="287.0" mnemonicParsing="false" onAction="#saveCSV" prefHeight="26.0" prefWidth="89.0" text="Save as .csv" />
+                        <Button layoutX="40.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveJSON" text="Save as .json" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Make appointment">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
